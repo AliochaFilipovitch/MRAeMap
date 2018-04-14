@@ -1,0 +1,36 @@
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 95%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      #logoleft {
+        position: absolute;
+        top: 4em;
+        left: 1em;
+        z-index: 10;
+        border:6px solid white;
+        -moz-border-radius:8px;
+        -webkit-border-radius:8px;
+        border-radius:8px;
+      }
+
+      #textleft {
+        position: absolute;
+        top: 12.5em;
+        left: 1em;
+        z-index: 12;
+      }
+
+      #badgeleft {
+        position: absolute;
+        top: 16em;
+        left: 1em;
+        z-index: 12;
+      }

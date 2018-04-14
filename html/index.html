@@ -1,0 +1,54 @@
+<!--
+ * Map MRAe IdF 
+ * Created by Alexis Queune
+ * April 2018
+ * All rights reserved
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <meta name="description" content="MRAe Map">
+    <meta name="author" content="Aliocha">
+
+    <!-- Bootstrap 4 WEB -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+
+    <!-- jQuery WEB -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>MRAe Map</title>
+
+    <link rel="stylesheet" type="text/css" href="../css/mystyle.css">
+
+  </head>
+  <body>
+    <span class="oi oi-icon-name" title="icon name" aria-hidden="true"></span>
+    <img src="http://www.side.developpement-durable.gouv.fr/EXPLOITATION/AEGLOB/basicimagedownload.ashx?repositoryId=2&itemId=1990" id="logoleft">
+    <div class="alert alert-success" role="alert" id="textleft">
+      Missions régionales d'autorité environnementale
+    </div>
+    <div id="badgeleft">
+      <span class="badge badge-light">Évaluer, Optimiser, Valoriser</span><br>     
+      <span class="badge badge-success">2016</span><br>
+      <span class="badge badge-danger">2017</span><br>
+      <span class="badge badge-warning">2018</span>
+    </div>
+
+    <div id="map"></div>
+    <footer class="footer">
+      <div class="container">
+        <small><span class="text-muted"><img src="../img/code.png" width="20" height="20"> handcoded by <a href="mailto:alexis.queune@developpement-durable.gouv.fr">Alexis Queune</a> <img src="../img/connect_plug.png" width="20" height="20"> connected to <a href="http://www.mrae.developpement-durable.gouv.fr" target="_blank">www.mrae.fr</a> <img src="../img/refresh.png" width="20" height="20">refresh <a href="#" target="_blank">API</a></span></small>
+      </div>
+    </footer>
+    <script src="../js/ajax.js"></script>
+    <script src="../js/map.js"></script>
+    <!--<script src="../js/markerclusterer.js"></script>-->
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDrSeUPSfISuSl5eKyleitVVaA-P8Tff8g&callback=initMap">
+    </script>
+  </body>
+</html>
