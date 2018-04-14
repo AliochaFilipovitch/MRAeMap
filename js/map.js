@@ -15,15 +15,15 @@
         // Adds a marker at the center of the map.
         //addMarkerSpecial(Paris);
 
-        //getMarker("http://localhost/MRAE/map/json/a16.json", "https://cdn.pixabay.com/photo/2014/05/26/09/48/icon-354359_640.png", new google.maps.Size(30, 40));
-        //getMarker("http://localhost/MRAE/map/json/kk16.json", "https://cdn.pixabay.com/photo/2014/05/26/09/48/icon-354359_640.png", new google.maps.Size(30, 40));
+        getMarker("../json/a16.json", "https://cdn.pixabay.com/photo/2014/05/26/09/48/icon-354359_640.png", new google.maps.Size(30, 40));
+        getMarker("../json/kk16.json", "https://cdn.pixabay.com/photo/2014/05/26/09/48/icon-354359_640.png", new google.maps.Size(30, 40));
         
-        //getMarker("http://localhost/MRAE/map/json/a17.json", "https://cdn0.iconfinder.com/data/icons/flat-file-format/100/pdf-512.png", new google.maps.Size(45, 45));
+        getMarker("../json/a17.json", "https://cdn0.iconfinder.com/data/icons/flat-file-format/100/pdf-512.png", new google.maps.Size(45, 45));
         getMarker("../json/kk17.json", "https://cdn0.iconfinder.com/data/icons/flat-file-format/100/pdf-512.png", new google.maps.Size(45, 45));
         
-        //getMarker("http://localhost/MRAE/map/json/a18.json", "https://pixy.org/src/10/102839.png", new google.maps.Size(28, 40));
+        getMarker("../json/a18.json", "https://pixy.org/src/10/102839.png", new google.maps.Size(28, 40));
         //getMarker("http://localhost/MRAE/map/json/a18r.json", "https://pixy.org/src/10/102839.png", new google.maps.Size(28, 40));
-       	//getMarker("http://localhost/MRAE/map/json/kk18.json", "https://pixy.org/src/10/102839.png", new google.maps.Size(28, 40));
+       	getMarker("../json/kk18.json", "https://pixy.org/src/10/102839.png", new google.maps.Size(28, 40));
         //getMarker("http://localhost:4567/data", "https://pixy.org/src/10/102839.png", new google.maps.Size(28, 40));
 
         // Add a marker clusterer to manage the markers.
