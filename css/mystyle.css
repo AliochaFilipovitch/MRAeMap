@@ -12,8 +12,8 @@
 
       #logoleft {
         position: absolute;
-        top: 4em;
-        left: 1em;
+        top: 3em;
+        left: 0.5em;
         z-index: 10;
         border:6px solid white;
         -moz-border-radius:8px;
@@ -23,14 +23,14 @@
 
       #textleft {
         position: absolute;
-        top: 12.5em;
-        left: 1em;
+        top: 12em;
+        left: 0.5em;
         z-index: 12;
       }
 
       #badgeleft {
         position: absolute;
-        top: 16em;
-        left: 1em;
+        top: 15.5em;
+        left: 0.5em;
         z-index: 12;
       }

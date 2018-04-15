@@ -15,16 +15,16 @@
         // Adds a marker at the center of the map.
         //addMarkerSpecial(Paris);
 
-        getMarker("../json/a16.json", "../img/icon-354359_640.png", new google.maps.Size(30, 40));
-        getMarker("../json/kk16.json", "../img/icon-354359_640.png", new google.maps.Size(30, 40));
+        getMarker("../json/geocode/a16.json", "img/icon-354359_640.png", new google.maps.Size(30, 40));
+        getMarker("../json/geocode/kk16.json", "img/icon-354359_640.png", new google.maps.Size(30, 40));
         
-        getMarker("../json/a17.json", "https://cdn0.iconfinder.com/data/icons/flat-file-format/100/pdf-512.png", new google.maps.Size(45, 45));
-        getMarker("../json/kk17.json", "https://cdn0.iconfinder.com/data/icons/flat-file-format/100/pdf-512.png", new google.maps.Size(45, 45));
+        getMarker("../json/geocode/a17.json", "https://cdn0.iconfinder.com/data/icons/flat-file-format/100/pdf-512.png", new google.maps.Size(45, 45));
+        getMarker("../json/geocode/kk17.json", "https://cdn0.iconfinder.com/data/icons/flat-file-format/100/pdf-512.png", new google.maps.Size(45, 45));
         
-        getMarker("../json/a18.json", "https://pixy.org/src/10/102839.png", new google.maps.Size(28, 40));
-        //getMarker("http://localhost/MRAE/map/json/a18r.json", "https://pixy.org/src/10/102839.png", new google.maps.Size(28, 40));
-       	getMarker("../json/kk18.json", "https://pixy.org/src/10/102839.png", new google.maps.Size(28, 40));
-        //getMarker("http://localhost:4567/data", "https://pixy.org/src/10/102839.png", new google.maps.Size(28, 40));
+        getMarker("../json/geocode/a18.json", "https://pixy.org/src/10/102839.png", new google.maps.Size(28, 40));
+        //getMarkerGeocode("http://localhost/MRAE/map/json/a18r.json", "https://pixy.org/src/10/102839.png", new google.maps.Size(28, 40));
+       	getMarker("../json/geocode/kk18.json", "https://pixy.org/src/10/102839.png", new google.maps.Size(28, 40));
+        //getMarkerGeocode("http://localhost/MRAE/map/json/kk18r.json", "https://pixy.org/src/10/102839.png", new google.maps.Size(28, 40));
 
         // Add a marker clusterer to manage the markers.
         var markerCluster = new MarkerClusterer(map, markers,
@@ -32,9 +32,27 @@
 
       }
 
-      //second function
+      //second function // Without Geocode
 
       function getMarker(url, urlimg, sizeimg) {
+
+      ajaxGet(url, function (reponse) {
+          var datascan = JSON.parse(reponse);
+          console.log(datascan);
+          datascan.forEach(function (datacan) {
+
+              addMarker(datacan[0], datacan[1], datacan[1], datacan[2], urlimg, sizeimg);
+              console.log(markers.length-1);
+              
+          });
+
+      });
+
+      }
+
+      // 3th function // With Geocode
+
+      function getMarkerGeocode(url, urlimg, sizeimg) {
 
       ajaxGet(url, function (reponse) {
           var datascan = JSON.parse(reponse);
@@ -55,7 +73,7 @@
 
       }
 
-      // 3th function //Adds a marker to the map and push to the array.
+      // 4th function //Adds a marker to the map and push to the array.
       
       function addMarker(location, name, title, url, urlimg, sizeimg) {
 
@@ -71,7 +89,7 @@
           }
         });
 
-        var contentString = '<h3>'+name+'</h3><h6>'+title+'<br><a href="'+url+'" target="_blank"><img src="../img/pdfred.png" width="50" height="50"></a></h6>';
+        var contentString = '<h3>'+name+'</h3><h6>'+title+'<br><a href="'+url+'" target="_blank"><img src="img/pdfred.png" width="50" height="50"></a></h6>';
 
         var infowindow = new google.maps.InfoWindow({
           //content: name+' ; '+title+' ; '+url
