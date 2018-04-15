@@ -41,7 +41,7 @@
           console.log(datascan);
           datascan.forEach(function (datacan) {
 
-              addMarker(datacan[0], datacan[1], datacan[1], datacan[2], urlimg, sizeimg);
+              addMarker(datacan[0], datacan[1], datacan[2], urlimg, sizeimg);
               console.log(markers.length-1);
               
           });
@@ -64,7 +64,7 @@
               console.log(dataville);
               var villelocation = dataville.results[0].geometry.location;
               //console.log(villelocation);
-              addMarker(villelocation, datacan[0], datacan[1], datacan[2], urlimg, sizeimg);
+              addMarker(villelocation, datacan[1], datacan[2], urlimg, sizeimg);
               console.log(markers.length-1);
               
             });
@@ -75,7 +75,7 @@
 
       // 4th function //Adds a marker to the map and push to the array.
       
-      function addMarker(location, name, title, url, urlimg, sizeimg) {
+      function addMarker(location, title, url, urlimg, sizeimg) {
 
         var marker = new google.maps.Marker({
           position: location,
@@ -89,7 +89,7 @@
           }
         });
 
-        var contentString = '<h3>'+name+'</h3><h6>'+title+'<br><a href="'+url+'" target="_blank"><img src="img/pdfred.png" width="50" height="50"></a></h6>';
+        var contentString = '<h6>'+title+'<br><a href="'+url+'" target="_blank"><img src="img/pdfred.png" width="50" height="50"></a></h6>';
 
         var infowindow = new google.maps.InfoWindow({
           //content: name+' ; '+title+' ; '+url
