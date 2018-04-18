@@ -19,36 +19,44 @@
 
           $('#kkId').click(function(){
             //console.log('Décisions');
-            //getMarker("../json/geocode/kk18.json", "https://pixy.org/src/10/102839.png", new google.maps.Size(45, 55));
+            deleteMarkers();
+            getMarker("../json/geocode/kk18.json", "https://pixy.org/src/10/102839.png", new google.maps.Size(45, 55));
             //getMarkerGeocode("http://localhost/MRAE/map/json/kk18r.json", "https://pixy.org/src/10/102839.png", new google.maps.Size(45, 55));
-            //getMarker("../json/geocode/kk17.json", "https://cdn0.iconfinder.com/data/icons/flat-file-format/100/pdf-512.png", new google.maps.Size(45, 45));
-            //getMarker("../json/geocode/kk16.json", "img/icon-354359_640.png", new google.maps.Size(20, 30));
+            getMarker("../json/geocode/kk17.json", "https://cdn0.iconfinder.com/data/icons/flat-file-format/100/pdf-512.png", new google.maps.Size(45, 45));
+            getMarker("../json/geocode/kk16.json", "img/icon-354359_640.png", new google.maps.Size(20, 30));
 
           });
 
           $('#aId').click(function(){
-            console.log('Avis');
+            //console.log('Avis');
             deleteMarkers();
-            getMarker("http://localhost/MRAE/map/json/geocode/a18.json", "https://pixy.org/src/10/102839.png", new google.maps.Size(45, 55));
+            getMarker("../json/geocode/a18.json", "https://pixy.org/src/10/102839.png", new google.maps.Size(45, 55));
             //getMarkerGeocode("http://localhost/MRAE/map/json/a18r.json", "https://pixy.org/src/10/102839.png", new google.maps.Size(45, 55));
-            getMarker("http://localhost/MRAE/map/json/geocode/a17.json", "https://cdn0.iconfinder.com/data/icons/flat-file-format/100/pdf-512.png", new google.maps.Size(45, 45));
-            getMarker("http://localhost/MRAE/map/json/geocode/a16.json", "img/icon-354359_640.png", new google.maps.Size(20, 30));
+            getMarker("../json/geocode/a17.json", "https://cdn0.iconfinder.com/data/icons/flat-file-format/100/pdf-512.png", new google.maps.Size(45, 45));
+            getMarker("../json/geocode/a16.json", "img/icon-354359_640.png", new google.maps.Size(20, 30));
           });
 
-        });
           
+          $('#allId').click(function(){
 
-        //getMarker("http://localhost/MRAE/map/json/geocode/a18.json", "https://pixy.org/src/10/102839.png", new google.maps.Size(45, 55));
+            deleteMarkers();
+
+        getMarker("../json/geocode/a18.json", "https://pixy.org/src/10/102839.png", new google.maps.Size(45, 55));
         //getMarkerGeocode("http://localhost/MRAE/map/json/a18r.json", "https://pixy.org/src/10/102839.png", new google.maps.Size(45, 55));
-        //getMarker("../json/geocode/kk18.json", "https://pixy.org/src/10/102839.png", new google.maps.Size(45, 55));
+        getMarker("../json/geocode/kk18.json", "https://pixy.org/src/10/102839.png", new google.maps.Size(45, 55));
         //getMarkerGeocode("http://localhost/MRAE/map/json/kk18r.json", "https://pixy.org/src/10/102839.png", new google.maps.Size(45, 55));
 
 
-        //getMarker("http://localhost/MRAE/map/json/geocode/a17.json", "https://cdn0.iconfinder.com/data/icons/flat-file-format/100/pdf-512.png", new google.maps.Size(45, 45));
-        //getMarker("../json/geocode/kk17.json", "https://cdn0.iconfinder.com/data/icons/flat-file-format/100/pdf-512.png", new google.maps.Size(45, 45));
+        getMarker("../json/geocode/a17.json", "https://cdn0.iconfinder.com/data/icons/flat-file-format/100/pdf-512.png", new google.maps.Size(45, 45));
+        getMarker("../json/geocode/kk17.json", "https://cdn0.iconfinder.com/data/icons/flat-file-format/100/pdf-512.png", new google.maps.Size(45, 45));
 
-        //getMarker("http://localhost/MRAE/map/json/geocode/a16.json", "img/icon-354359_640.png", new google.maps.Size(20, 30));
-        //getMarker("../json/geocode/kk16.json", "img/icon-354359_640.png", new google.maps.Size(20, 30));
+        getMarker("../json/geocode/a16.json", "img/icon-354359_640.png", new google.maps.Size(20, 30));
+        getMarker("../json/geocode/kk16.json", "img/icon-354359_640.png", new google.maps.Size(20, 30));
+
+        });
+
+
+         });
 
         // Add a marker clusterer to manage the markers.
         var markerCluster = new MarkerClusterer(map, markers,
