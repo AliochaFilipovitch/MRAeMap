@@ -28,32 +28,11 @@
               getMarker("../json/geocode/kk18.json", "https://pixy.org/src/10/102839.png", new google.maps.Size(45, 55));
             }
 
-            else if (year17 == true) {
+            if (year17 == true) {
               getMarker("../json/geocode/kk17.json", "https://cdn0.iconfinder.com/data/icons/flat-file-format/100/pdf-512.png", new google.maps.Size(45, 45));
             }
 
-            else if (year16 == true) {
-              getMarker("../json/geocode/kk16.json", "img/icon-354359_640.png", new google.maps.Size(20, 30));
-            }
-
-            else if (year18 == true && year17 == true) {
-              getMarker("../json/geocode/kk18.json", "https://pixy.org/src/10/102839.png", new google.maps.Size(45, 55));
-              getMarker("../json/geocode/kk17.json", "https://cdn0.iconfinder.com/data/icons/flat-file-format/100/pdf-512.png", new google.maps.Size(45, 45));
-            }
-
-            else if (year18 == true && year16 == true) {
-              getMarker("../json/geocode/kk18.json", "https://pixy.org/src/10/102839.png", new google.maps.Size(45, 55));
-              getMarker("../json/geocode/kk16.json", "img/icon-354359_640.png", new google.maps.Size(20, 30));
-            }
-
-            else if (year17 == true && year16 == true) {
-              getMarker("../json/geocode/kk17.json", "https://cdn0.iconfinder.com/data/icons/flat-file-format/100/pdf-512.png", new google.maps.Size(45, 45));
-              getMarker("../json/geocode/kk16.json", "img/icon-354359_640.png", new google.maps.Size(20, 30));
-            }
-
-            else if ((year18 == true && year17 == true && year16 == true) || (year18 == false && year17 == false && year16 == false)) {
-              getMarker("../json/geocode/kk18.json", "https://pixy.org/src/10/102839.png", new google.maps.Size(45, 55));
-              getMarker("../json/geocode/kk17.json", "https://cdn0.iconfinder.com/data/icons/flat-file-format/100/pdf-512.png", new google.maps.Size(45, 45));
+            if (year16 == true) {
               getMarker("../json/geocode/kk16.json", "img/icon-354359_640.png", new google.maps.Size(20, 30));
             }
 
@@ -72,32 +51,11 @@
               getMarker("../json/geocode/a18.json", "https://pixy.org/src/10/102839.png", new google.maps.Size(45, 55));
             }
 
-            else if (year17a == true) {
+            if (year17a == true) {
               getMarker("../json/geocode/a17.json", "https://cdn0.iconfinder.com/data/icons/flat-file-format/100/pdf-512.png", new google.maps.Size(45, 45));
             }
 
-            else if (year16a == true) {
-              getMarker("../json/geocode/a16.json", "img/icon-354359_640.png", new google.maps.Size(20, 30));
-            }
-
-            else if (year18a == true && year17a == true) {
-              getMarker("../json/geocode/a18.json", "https://pixy.org/src/10/102839.png", new google.maps.Size(45, 55));
-              getMarker("../json/geocode/a17.json", "https://cdn0.iconfinder.com/data/icons/flat-file-format/100/pdf-512.png", new google.maps.Size(45, 45));
-            }
-
-            else if (year18a == true && year16a == true) {
-              getMarker("../json/geocode/a18.json", "https://pixy.org/src/10/102839.png", new google.maps.Size(45, 55));
-              getMarker("../json/geocode/a16.json", "img/icon-354359_640.png", new google.maps.Size(20, 30));
-            }
-
-            else if (year17a == true && year16a == true) {
-              getMarker("../json/geocode/a17.json", "https://cdn0.iconfinder.com/data/icons/flat-file-format/100/pdf-512.png", new google.maps.Size(45, 45));
-              getMarker("../json/geocode/a16.json", "img/icon-354359_640.png", new google.maps.Size(20, 30));
-            }
-
-            else if ((year18a == true && year17a == true && year16a == true) || (year18a == false && year17a == false && year16a == false)) {
-              getMarker("../json/geocode/a18.json", "https://pixy.org/src/10/102839.png", new google.maps.Size(45, 55));
-              getMarker("../json/geocode/a17.json", "https://cdn0.iconfinder.com/data/icons/flat-file-format/100/pdf-512.png", new google.maps.Size(45, 45));
+            if (year16a == true) {
               getMarker("../json/geocode/a16.json", "img/icon-354359_640.png", new google.maps.Size(20, 30));
             }
 
