@@ -30,7 +30,10 @@
 
       #badgeleft {
         position: absolute;
-        top: 15.5em;
+        top: 3em;
         left: 0.5em;
         z-index: 12;
+        background-color: white;
+        padding: 10px;
+        border-radius: 25px;
       }

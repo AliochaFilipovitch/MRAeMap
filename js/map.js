@@ -4,10 +4,10 @@
       //first function
 
       function initMap() {
-        var Paris = { lat: 48.72, lng: 2.3522219000000177 };
+        var Paris = { lat: 48.866667, lng: 2.3522219000000177 };
 
         map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 9,
+          zoom: 11,
           center: Paris,
           styles: [{"stylers": [{ "saturation": -100 }]}]
         });
@@ -20,26 +20,94 @@
           $('#kkId').click(function(){
             //console.log('Décisions');
             deleteMarkers();
-            getMarker("../json/geocode/kk18.json", "https://pixy.org/src/10/102839.png", new google.maps.Size(45, 55));
+            var year18 = $("[id='customRadioInline1']").is(':checked');
+            var year17 = $("[id='customRadioInline2']").is(':checked');
+            var year16 = $("[id='customRadioInline3']").is(':checked');
+
+            if (year18 == true) {
+              getMarker("../json/geocode/kk18.json", "https://pixy.org/src/10/102839.png", new google.maps.Size(45, 55));
+            }
+
+            if (year17 == true) {
+              getMarker("../json/geocode/kk17.json", "https://cdn0.iconfinder.com/data/icons/flat-file-format/100/pdf-512.png", new google.maps.Size(45, 45));
+            }
+
+            if (year16 == true) {
+              getMarker("../json/geocode/kk16.json", "img/icon-354359_640.png", new google.maps.Size(20, 30));
+            }
+
+            if (year18 == true && year17 == true) {
+              getMarker("../json/geocode/kk18.json", "https://pixy.org/src/10/102839.png", new google.maps.Size(45, 55));
+              getMarker("../json/geocode/kk17.json", "https://cdn0.iconfinder.com/data/icons/flat-file-format/100/pdf-512.png", new google.maps.Size(45, 45));
+            }
+
+            if (year18 == true && year16 == true) {
+              getMarker("../json/geocode/kk18.json", "https://pixy.org/src/10/102839.png", new google.maps.Size(45, 55));
+              getMarker("../json/geocode/kk16.json", "img/icon-354359_640.png", new google.maps.Size(20, 30));
+            }
+
+            if (year17 == true && year16 == true) {
+              getMarker("../json/geocode/kk17.json", "https://cdn0.iconfinder.com/data/icons/flat-file-format/100/pdf-512.png", new google.maps.Size(45, 45));
+              getMarker("../json/geocode/kk16.json", "img/icon-354359_640.png", new google.maps.Size(20, 30));
+            }
+
+            if ((year18 == true && year17 == true && year16 == true) || (year18 == false && year17 == false && year16 == false)) {
+              getMarker("../json/geocode/kk18.json", "https://pixy.org/src/10/102839.png", new google.maps.Size(45, 55));
+              getMarker("../json/geocode/kk17.json", "https://cdn0.iconfinder.com/data/icons/flat-file-format/100/pdf-512.png", new google.maps.Size(45, 45));
+              getMarker("../json/geocode/kk16.json", "img/icon-354359_640.png", new google.maps.Size(20, 30));
+            }
+
             //getMarkerGeocode("https://mrae-api.herokuapp.com/data_kk", "https://pixy.org/src/10/102839.png", new google.maps.Size(45, 55));
-            //getMarker("../json/geocode/kk17.json", "https://cdn0.iconfinder.com/data/icons/flat-file-format/100/pdf-512.png", new google.maps.Size(45, 45));
-            //getMarker("../json/geocode/kk16.json", "img/icon-354359_640.png", new google.maps.Size(20, 30));
 
           });
 
           $('#aId').click(function(){
             //console.log('Avis');
             deleteMarkers();
-            //getMarker("../json/geocode/a18.json", "https://pixy.org/src/10/102839.png", new google.maps.Size(45, 55));
-            //getMarkerGeocode("https://mrae-api.herokuapp.com/data_a", "https://pixy.org/src/10/102839.png", new google.maps.Size(45, 55));
-            //getMarker("../json/geocode/a17.json", "https://cdn0.iconfinder.com/data/icons/flat-file-format/100/pdf-512.png", new google.maps.Size(45, 45));
-            //getMarker("../json/geocode/a16.json", "img/icon-354359_640.png", new google.maps.Size(20, 30));
+            var year18 = $("[id='customRadioInline1']").is(':checked');
+            var year17 = $("[id='customRadioInline2']").is(':checked');
+            var year16 = $("[id='customRadioInline3']").is(':checked');
+
+            if (year18 == true) {
+              getMarker("../json/geocode/a18.json", "https://pixy.org/src/10/102839.png", new google.maps.Size(45, 55));
+            }
+
+            if (year17 == true) {
+              getMarker("../json/geocode/a17.json", "https://cdn0.iconfinder.com/data/icons/flat-file-format/100/pdf-512.png", new google.maps.Size(45, 45));
+            }
+
+            if (year16 == true) {
+              getMarker("../json/geocode/a16.json", "img/icon-354359_640.png", new google.maps.Size(20, 30));
+            }
+
+            if (year18 == true && year17 == true) {
+              getMarker("../json/geocode/a18.json", "https://pixy.org/src/10/102839.png", new google.maps.Size(45, 55));
+              getMarker("../json/geocode/a17.json", "https://cdn0.iconfinder.com/data/icons/flat-file-format/100/pdf-512.png", new google.maps.Size(45, 45));
+            }
+
+            if (year18 == true && year16 == true) {
+              getMarker("../json/geocode/a18.json", "https://pixy.org/src/10/102839.png", new google.maps.Size(45, 55));
+              getMarker("../json/geocode/a16.json", "img/icon-354359_640.png", new google.maps.Size(20, 30));
+            }
+
+            if (year17 == true && year16 == true) {
+              getMarker("../json/geocode/a17.json", "https://cdn0.iconfinder.com/data/icons/flat-file-format/100/pdf-512.png", new google.maps.Size(45, 45));
+              getMarker("../json/geocode/a16.json", "img/icon-354359_640.png", new google.maps.Size(20, 30));
+            }
+
+            if ((year18 == true && year17 == true && year16 == true) || (year18 == false && year17 == false && year16 == false)) {
+              getMarker("../json/geocode/a18.json", "https://pixy.org/src/10/102839.png", new google.maps.Size(45, 55));
+              getMarker("../json/geocode/a17.json", "https://cdn0.iconfinder.com/data/icons/flat-file-format/100/pdf-512.png", new google.maps.Size(45, 45));
+              getMarker("../json/geocode/a16.json", "img/icon-354359_640.png", new google.maps.Size(20, 30));
+            }
+
+            //getMarkerGeocode("https://mrae-api.herokuapp.com/data_kk", "https://pixy.org/src/10/102839.png", new google.maps.Size(45, 55));
           });
 
           
           $('#allId').click(function(){
 
-            deleteMarkers();
+        deleteMarkers();
 
         getMarker("../json/geocode/a18.json", "https://pixy.org/src/10/102839.png", new google.maps.Size(45, 55));
         //getMarkerGeocode("http://localhost/MRAE/map/json/a18r.json", "https://pixy.org/src/10/102839.png", new google.maps.Size(45, 55));
@@ -122,7 +190,7 @@
           }
         });
 
-        var contentString = '<h6>'+title+'<br><a href="'+url+'" target="_blank"><img src="img/pdfred.png" width="50" height="50"></a></h6>';
+        var contentString = '<iframe src="'+url+'" width="600" height="800" align="middle"></iframe>';
 
         var infowindow = new google.maps.InfoWindow({
           //content: name+' ; '+title+' ; '+url
