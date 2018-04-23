@@ -21,19 +21,19 @@
             //console.log('Décisions');
             deleteMarkers();
             getMarker("../json/geocode/kk18.json", "https://pixy.org/src/10/102839.png", new google.maps.Size(45, 55));
-            //getMarkerGeocode("http://localhost/MRAE/map/json/kk18r.json", "https://pixy.org/src/10/102839.png", new google.maps.Size(45, 55));
-            getMarker("../json/geocode/kk17.json", "https://cdn0.iconfinder.com/data/icons/flat-file-format/100/pdf-512.png", new google.maps.Size(45, 45));
-            getMarker("../json/geocode/kk16.json", "img/icon-354359_640.png", new google.maps.Size(20, 30));
+            //getMarkerGeocode("https://mrae-api.herokuapp.com/data_kk", "https://pixy.org/src/10/102839.png", new google.maps.Size(45, 55));
+            //getMarker("../json/geocode/kk17.json", "https://cdn0.iconfinder.com/data/icons/flat-file-format/100/pdf-512.png", new google.maps.Size(45, 45));
+            //getMarker("../json/geocode/kk16.json", "img/icon-354359_640.png", new google.maps.Size(20, 30));
 
           });
 
           $('#aId').click(function(){
             //console.log('Avis');
             deleteMarkers();
-            getMarker("../json/geocode/a18.json", "https://pixy.org/src/10/102839.png", new google.maps.Size(45, 55));
-            //getMarkerGeocode("http://localhost/MRAE/map/json/a18r.json", "https://pixy.org/src/10/102839.png", new google.maps.Size(45, 55));
-            getMarker("../json/geocode/a17.json", "https://cdn0.iconfinder.com/data/icons/flat-file-format/100/pdf-512.png", new google.maps.Size(45, 45));
-            getMarker("../json/geocode/a16.json", "img/icon-354359_640.png", new google.maps.Size(20, 30));
+            //getMarker("../json/geocode/a18.json", "https://pixy.org/src/10/102839.png", new google.maps.Size(45, 55));
+            //getMarkerGeocode("https://mrae-api.herokuapp.com/data_a", "https://pixy.org/src/10/102839.png", new google.maps.Size(45, 55));
+            //getMarker("../json/geocode/a17.json", "https://cdn0.iconfinder.com/data/icons/flat-file-format/100/pdf-512.png", new google.maps.Size(45, 45));
+            //getMarker("../json/geocode/a16.json", "img/icon-354359_640.png", new google.maps.Size(20, 30));
           });
 
           
