@@ -26,6 +26,8 @@
 
             if (year18 == true) {
               getMarker("../json/geocode/kk18.json", "https://pixy.org/src/10/102839.png", new google.maps.Size(45, 55));
+              getMarkerGeocode("https://mrae-api.herokuapp.com/data_kk", "https://pixy.org/src/10/102839.png", new google.maps.Size(45, 55));
+
             }
 
             if (year17 == true) {
@@ -35,8 +37,6 @@
             if (year16 == true) {
               getMarker("../json/geocode/kk16.json", "img/icon-354359_640.png", new google.maps.Size(20, 30));
             }
-
-            //getMarkerGeocode("https://mrae-api.herokuapp.com/data_kk", "https://pixy.org/src/10/102839.png", new google.maps.Size(45, 55));
 
           });
 
