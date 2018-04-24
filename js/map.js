@@ -148,7 +148,7 @@
           }
         });
 
-        var contentString = '<iframe src="'+url+'" width="600" height="800" align="middle"></iframe>';
+        var contentString = '<h6>Document <a href="'+url+'" target="_blank">PDF</a></h6>';
 
         var infowindow = new google.maps.InfoWindow({
           //content: name+' ; '+title+' ; '+url
