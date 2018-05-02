@@ -24,9 +24,13 @@
             var year17 = $("[id='customRadioInline2']").is(':checked');
             var year16 = $("[id='customRadioInline3']").is(':checked');
 
+			// $( "#customRadioInline1" ).change(function() {
+			//   console.log( "Handler for .change() called." );
+			// });
+
             if (year18 == true) {
-              // getMarker("../json/geocode/kk18.json", "https://pixy.org/src/10/102839.png", new google.maps.Size(45, 55));
-              getMarkerGeocode("https://mrae-api.herokuapp.com/data_kk", "https://pixy.org/src/10/102839.png", new google.maps.Size(45, 55));
+              getMarker("../json/geocode/kk18.json", "https://pixy.org/src/10/102839.png", new google.maps.Size(45, 55));
+              // getMarkerGeocode("https://mrae-api.herokuapp.com/data_kk", "https://pixy.org/src/10/102839.png", new google.maps.Size(45, 55));
 
             }
 
