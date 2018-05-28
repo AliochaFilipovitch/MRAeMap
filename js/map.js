@@ -24,6 +24,7 @@ function initMap() {
 
       if (year18 == true) {
         getMarker("../json/geocode/kk18.json", "img/circle/circle-yel.svg", new google.maps.Size(40, 40));
+        //getMarkerNew("http://localhost/MRAE/map/json/geocode/kk18new.json", "img/circle/circle-yel.svg", new google.maps.Size(40, 40));
         //getMarkerGeocode("https://mrae-api.herokuapp.com/data_kk", "https://pixy.org/src/10/102839.png", new google.maps.Size(45, 55));
 
       }
@@ -35,6 +36,13 @@ function initMap() {
       if (year16 == true) {
         getMarker("../json/geocode/kk16.json", "img/circle/circle-gre.svg", new google.maps.Size(20, 20));
       }
+
+    });
+
+    $('#kkNewId').click(function(){
+
+      deleteMarkers();
+      getMarkerNew("../json/geocode/kk18new.json", "img/circle/circle-yel.svg", new google.maps.Size(40, 40));
 
     });
 
@@ -86,6 +94,22 @@ ajaxGet(url, function (reponse) {
 
 }
 
+function getMarkerNew(url, urlimg, sizeimg) {
+
+ajaxGet(url, function (reponse) {
+    var datascan = JSON.parse(reponse);
+    console.log(datascan);
+    datascan.forEach(function (datacan) {
+      console.log(datacan[4]);
+        addMarkerNew(datacan[0], datacan[1], datacan[2], datacan[3], datacan[4], urlimg, sizeimg);
+        console.log(markers.length-1);
+        
+    });
+
+});
+
+}
+
 //// 3th function // With Geocode
 function getMarkerGeocode(url, urlimg, sizeimg) {
 
@@ -125,6 +149,34 @@ function addMarker(location, title, url, urlimg, sizeimg) {
   });
 
   var contentString = '<h6>Document <a href="'+url+'" target="_blank">PDF</a></h6>';
+
+  var infowindow = new google.maps.InfoWindow({
+    //content: name+' ; '+title+' ; '+url
+    content: contentString
+  });
+
+  marker.addListener('click', function() {
+    infowindow.open(map, marker);
+  });
+
+  markers.push(marker);
+}
+
+function addMarkerNew(location, title, url, sens, enjeux, urlimg, sizeimg) {
+
+  var marker = new google.maps.Marker({
+    position: location,
+    map: map,
+    draggable: true,
+    animation: google.maps.Animation.DROP,
+    icon: {
+      url: urlimg,
+      //size: new google.maps.Size(64, 64),
+      scaledSize: sizeimg
+    }
+  });
+
+  var contentString = '<h5>'+title+'</h5><h6><em>Document PDF</em> : <a href="'+url+'" target="_blank">ici</a></h6><h6><em>Sens de la Décision</em> : '+sens+'</h6><h6><em>Enjeux</em> : '+enjeux+'</h6>';
 
   var infowindow = new google.maps.InfoWindow({
     //content: name+' ; '+title+' ; '+url
