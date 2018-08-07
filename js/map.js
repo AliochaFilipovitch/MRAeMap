@@ -148,7 +148,7 @@ function addMarker(location, title, url, urlimg, sizeimg) {
     }
   });
 
-  var contentString = '<h6>Document <a href="'+url+'" target="_blank">PDF</a></h6>';
+  var contentString = '<h5>'+title+'</h5><h6>Document <a href="'+url+'" target="_blank">PDF</a></h6>';
 
   var infowindow = new google.maps.InfoWindow({
     //content: name+' ; '+title+' ; '+url
